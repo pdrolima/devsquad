@@ -23,4 +23,13 @@ class Product extends Model
         'price'
     ];
 
+    /**
+     * A product belongs to a department.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function department() : BelongsTo
+    {
+        return $this->belongsTo(ProductCategory::class, 'category');
+    }
 }
