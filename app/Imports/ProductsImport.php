@@ -14,7 +14,6 @@ use Maatwebsite\Excel\Events\AfterImport;
 
 class ProductsImport implements ToModel, WithChunkReading, ShouldQueue, WithEvents
 {
-
     use Importable;
 
     public function __construct(User $importedBy)
@@ -51,10 +50,5 @@ class ProductsImport implements ToModel, WithChunkReading, ShouldQueue, WithEven
     public function chunkSize(): int
     {
         return 1000;
-    }
-
-    public function getRowCount(): int
-    {
-        return $this->rows;
     }
 }
