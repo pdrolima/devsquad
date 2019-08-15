@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Product;
-use Illuminate\Http\Request;
 use App\Http\Requests\ProductCreateRequest;
 use Illuminate\Http\Response;
 use Facades\App\Services\ImageUpload;
 use App\Http\Requests\ProductUpdateRequest;
+use App\Http\Resources\ProductResource;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -20,7 +21,7 @@ class ProductController extends Controller
     {
         $products = Product::orderBy('name')->paginate(10);
 
-        return response()->json($products, Response::HTTP_OK);
+        return ProductResource::collection($products);
     }
 
     /**
@@ -33,13 +34,13 @@ class ProductController extends Controller
     {
         $product = Product::create([
             'name' => $request->name,
-            'image' => $request->has('image') ? ImageUpload::upload($request->image) : null,
+            'image' => ! is_null($request->image) ? ImageUpload::upload($request->file('image')) : null,
             'description' => $request->description,
             'category' => $request->category,
             'price' => $request->price,
         ]);
 
-        return response()->json($product, Response::HTTP_OK);
+        return new ProductResource($product);
     }
 
     /**
@@ -50,7 +51,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return response()->json($product, Response::HTTP_OK);
+        return new ProductResource($product);
     }
 
     /**
@@ -65,14 +66,14 @@ class ProductController extends Controller
         tap($product, function ($instance) use ($request) {
             return $instance->fill([
                 'name' => $request->name,
-                'image' => $request->has('image') ? ImageUpload::upload($request->image) : $instance->image,
+                'image' => ! is_null($request->image) ? ImageUpload::upload($request->file('image')) : $instance->image,
                 'description' => $request->description,
                 'category' => $request->category,
                 'price' => $request->price
             ]);
         })->save();
 
-        return response()->json($product, Response::HTTP_OK);
+        return new ProductResource($product);
     }
 
     /**
@@ -85,6 +86,6 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        return response()->json($product, Response::HTTP_OK);
+        return response()->json([], Response::HTTP_OK);
     }
 }
