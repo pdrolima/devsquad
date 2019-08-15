@@ -2489,6 +2489,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -47617,9 +47629,28 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-header" }, [_vm._v("Home")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _vm._v("\n            Welcome!\n        ")
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -48373,17 +48404,50 @@ var render = function() {
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _vm._v(
-              "Viewing Product: " +
-                _vm._s(_vm.product.name) +
-                " (#" +
-                _vm._s(_vm.product.id) +
-                ")   "
+        _c("nav", { attrs: { "aria-label": "breadcrumb" } }, [
+          _c("ol", { staticClass: "breadcrumb" }, [
+            _c(
+              "li",
+              { staticClass: "breadcrumb-item" },
+              [
+                _c("router-link", { attrs: { to: { name: "home" } } }, [
+                  _vm._v("Home")
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              { staticClass: "breadcrumb-item" },
+              [
+                _c("router-link", { attrs: { to: { name: "products" } } }, [
+                  _vm._v("Products")
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              {
+                staticClass: "breadcrumb-item active",
+                attrs: { "aria-current": "page" }
+              },
+              [
+                _vm._v(
+                  "\n             Viewing Product " +
+                    _vm._s(_vm.product.name) +
+                    " (#" +
+                    _vm._s(_vm.product.id) +
+                    ")\n          "
+                )
+              ]
             )
-          ]),
-          _vm._v(" "),
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "d-flex flex-wrap" }, [
               _c("img", {
