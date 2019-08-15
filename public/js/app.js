@@ -2296,7 +2296,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.component(vform__WEBPACK_IMPORTED_MOD
                 _context2.next = 2;
                 return axios.get("/api/products/".concat(this.$route.params.id)).then(function (_ref2) {
                   var data = _ref2.data;
-                  var product = data;
+                  var product = data.data;
 
                   _this2.form.keys().forEach(function (key) {
                     _this2.form[key] = product[key];
