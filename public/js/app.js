@@ -2650,10 +2650,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      product: {}
+      product: {},
+      loading: false
     };
   },
   created: function created() {
@@ -2670,13 +2676,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
+                this.loading = true;
+                _context.next = 3;
                 return axios.get("/api/products/".concat(this.$route.params.id)).then(function (_ref) {
                   var data = _ref.data;
                   _this.product = data.data;
+                  _this.loading = false;
                 })["catch"](function (err) {});
 
-              case 2:
+              case 3:
               case "end":
                 return _context.stop();
             }
@@ -48728,37 +48736,52 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "d-flex flex-wrap" }, [
-              _c("img", {
-                staticClass: "flex-1 w-25",
-                attrs: { src: _vm.product.image, alt: _vm.product.name }
-              }),
-              _vm._v(" "),
-              _c("dl", { staticClass: "flex-column p-5" }, [
-                _c("dt", [_vm._v("Product name")]),
-                _vm._v(" "),
-                _c("dd", [_vm._v(_vm._s(_vm.product.name))]),
-                _vm._v(" "),
-                _c("dt", [_vm._v("Product price")]),
-                _vm._v(" "),
-                _c("dd", [_vm._v("$ " + _vm._s(_vm.product.price))]),
-                _vm._v(" "),
-                _c("dt", [_vm._v("Product category")]),
-                _vm._v(" "),
-                _c("dd", [_vm._v(_vm._s(_vm.product.department.name))]),
-                _vm._v(" "),
-                _c("dt", [_vm._v("Product description")]),
-                _vm._v(" "),
-                _c("dd", [_vm._v(_vm._s(_vm.product.description))])
-              ])
-            ])
+            _vm.loading
+              ? _c("div", { staticClass: "d-flex justify-content-center" }, [
+                  _vm._m(0)
+                ])
+              : _c("div", { staticClass: "d-flex flex-wrap" }, [
+                  _c("img", {
+                    staticClass: "flex-1 w-25",
+                    attrs: { src: _vm.product.image, alt: _vm.product.name }
+                  }),
+                  _vm._v(" "),
+                  _c("dl", { staticClass: "flex-column p-5" }, [
+                    _c("dt", [_vm._v("Product name")]),
+                    _vm._v(" "),
+                    _c("dd", [_vm._v(_vm._s(_vm.product.name))]),
+                    _vm._v(" "),
+                    _c("dt", [_vm._v("Product price")]),
+                    _vm._v(" "),
+                    _c("dd", [_vm._v("$ " + _vm._s(_vm.product.price))]),
+                    _vm._v(" "),
+                    _c("dt", [_vm._v("Product category")]),
+                    _vm._v(" "),
+                    _c("dd", [_vm._v(_vm._s(_vm.product.department.name))]),
+                    _vm._v(" "),
+                    _c("dt", [_vm._v("Product description")]),
+                    _vm._v(" "),
+                    _c("dd", [_vm._v(_vm._s(_vm.product.description))])
+                  ])
+                ])
           ])
         ])
       ])
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "spinner-border", attrs: { role: "status" } },
+      [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
+    )
+  }
+]
 render._withStripped = true
 
 

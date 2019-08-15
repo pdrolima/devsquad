@@ -17,7 +17,12 @@
         </nav>
         <div class="card">
           <div class="card-body">
-            <div class="d-flex flex-wrap">
+            <div class="d-flex justify-content-center" v-if="loading">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap" v-else>
                 <img :src="product.image" :alt="product.name" class="flex-1 w-25">
                 <dl class="flex-column p-5">
                     <dt>Product name</dt>
@@ -40,7 +45,8 @@
 <script>
 export default {
   data: () => ({
-    product: {}
+    product: {},
+    loading: false,
   }),
 
   created() {
@@ -49,10 +55,12 @@ export default {
 
   methods: {
     async getProduct() {
+      this.loading = true
       await axios
         .get(`/api/products/${this.$route.params.id}`)
         .then(({ data }) => {
           this.product = data.data;
+          this.loading = false
         })
         .catch(err => {});
     }
