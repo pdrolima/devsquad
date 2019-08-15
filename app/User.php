@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function appVars()
+    {
+        return [
+            'user' => auth()->user() ? auth()->user()->only('id', 'name', 'email', 'api_token') : []
+        ];
+    }
 }
