@@ -2466,6 +2466,29 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -48230,7 +48253,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(product.price))]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(product.category))]),
+                      _c("td", [_vm._v(_vm._s(product.department.name))]),
                       _vm._v(" "),
                       _c(
                         "td",
@@ -48347,7 +48370,50 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _vm._v(
+              "Viewing Product: " +
+                _vm._s(_vm.product.name) +
+                " (#" +
+                _vm._s(_vm.product.id) +
+                ")   "
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("div", { staticClass: "d-flex flex-wrap" }, [
+              _c("img", {
+                staticClass: "flex-1 w-25",
+                attrs: { src: _vm.product.image, alt: _vm.product.name }
+              }),
+              _vm._v(" "),
+              _c("dl", { staticClass: "flex-column p-5" }, [
+                _c("dt", [_vm._v("Product name")]),
+                _vm._v(" "),
+                _c("dd", [_vm._v(_vm._s(_vm.product.name))]),
+                _vm._v(" "),
+                _c("dt", [_vm._v("Product price")]),
+                _vm._v(" "),
+                _c("dd", [_vm._v("$ " + _vm._s(_vm.product.price))]),
+                _vm._v(" "),
+                _c("dt", [_vm._v("Product category")]),
+                _vm._v(" "),
+                _c("dd", [_vm._v(_vm._s(_vm.product.department.name))]),
+                _vm._v(" "),
+                _c("dt", [_vm._v("Product description")]),
+                _vm._v(" "),
+                _c("dd", [_vm._v(_vm._s(_vm.product.description))])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

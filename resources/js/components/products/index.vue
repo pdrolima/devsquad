@@ -20,7 +20,7 @@
                   <tr v-for="(product, index) in products" :key="index">
                       <td>{{ product.name }}</td>
                       <td>{{ product.price }}</td>
-                      <td>{{ product.category }}</td>
+                      <td>{{ product.department.name }}</td>
                       <td>
                           <router-link :to="{ name: 'products.show', params: { id: product.id } }" class="btn btn-link">Visualizar</router-link>
                           <router-link :to="{ name: 'products.edit', params: { id: product.id } }" class="btn btn-link">Editar</router-link>
