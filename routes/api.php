@@ -15,5 +15,6 @@ use Illuminate\Http\Request;
 
 Route::group(['middleware' => ['auth:api']], function () {
     Route::resource('products', 'ProductController');
+    Route::get('products_categories', 'CategoriesController');
     Route::post('products_import', 'ProductImportController@import');
 });
