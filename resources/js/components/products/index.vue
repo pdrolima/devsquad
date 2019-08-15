@@ -37,6 +37,9 @@
             <router-link :to="{ name: 'products.create' }" class="btn btn-primary btn-lg btn-block">
                 Cadastrar Produto
             </router-link>
+            <router-link :to="{ name: 'products.import' }" class="btn btn-light btn-lg btn-block">
+                Importar produtos
+            </router-link>
         </div>
       </div>
     </div>

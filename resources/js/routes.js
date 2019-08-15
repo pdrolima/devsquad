@@ -15,6 +15,11 @@ export default [
         component: require('./components/products/create').default
     },
     {
+        path: '/products/import',
+        name: 'products.import',
+        component: require('./components/products/import').default
+    },
+    {
         path: '/products/:id',
         name: 'products.show',
         component: require('./components/products/show').default
@@ -23,5 +28,5 @@ export default [
         path: '/products/:id/edit',
         name: 'products.edit',
         component: require('./components/products/edit').default
-    }
+    },
 ]   
