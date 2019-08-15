@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Global -->
+    <script> window.App = @json($extra)</script>
 </head>
 <body>
     <div id="app">
@@ -73,7 +76,11 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            @guest
+               @yield('content')
+            @else
+                <router-view></router-view>
+            @endguest
         </main>
     </div>
 </body>
