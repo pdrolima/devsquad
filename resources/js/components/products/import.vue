@@ -7,6 +7,7 @@
           <div class="card-body">
             <form @submit.prevent="onSubmit" @keydown="form.onKeydown($event)">
               <alert-success :form="form" :message="message"></alert-success>
+              <alert-errors :form="form">There were some problems with your input.</alert-errors>
               <div class="row">
                 <!-- Product image -->
                 <div class="col-md-12">
@@ -58,12 +59,13 @@
 import Vue from "vue";
 import Tippy from "v-tippy";
 import "v-tippy/dist/tippy.css";
-import { Form, HasError, AlertSuccess} from "vform";
+import { Form, HasError, AlertSuccess, AlertErrors } from "vform";
 import objectToFormData from 'object-to-formdata'
 
 Vue.use(Tippy);
 Vue.component(HasError.name, HasError);
 Vue.component(AlertSuccess.name, AlertSuccess)
+Vue.component(AlertErrors.name, AlertErrors)
 
 export default {
   data: () => ({

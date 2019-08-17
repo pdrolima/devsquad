@@ -11,7 +11,27 @@
                 <!-- Product image -->
                 <div class="col-md-12">
                   <div class="form-group">
+                    <img :src="form.image" alt="..." class="img-thumbnail w-25 d-block mb-2" v-if="form.image">
                     <label>Product image (optional)</label>
+                    <div class="d-block">
+                      <input
+                        ref="input"
+                        name="image"
+                        type="file"
+                        style="display: none;"
+                        :class="{ 'is-invalid': form.errors.has('file') }"
+                        @change="addFile()"
+                      />
+                      <a
+                        v-tippy
+                        class="btn btn-light"
+                        title="Choose a image for the product"
+                        @click="openFileDialog"
+                      >
+                        <i class="flaticon-attachment" />
+                        {{ form.image ? 'Change' : 'Upload' }} image
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <!-- Product Name -->
@@ -100,6 +120,8 @@ import Tippy from "v-tippy";
 import "v-tippy/dist/tippy.css";
 import { Form, HasError, AlertSuccess } from "vform";
 import objectToFormData from "object-to-formdata";
+import categories from '../../mixins/categories'
+import fileUpload from '../../mixins/fileUpload';
 
 Vue.use(Tippy);
 Vue.component(HasError.name, HasError);
@@ -113,21 +135,18 @@ export default {
       description: "",
       price: 0,
       category: null,
-    })
+      image: null,
+      "_method": "PATCH"
+    }),
   }),
 
+  mixins: [categories, fileUpload],
+
   created() {
-    this.getCategories();
     this.getProduct();
   },
 
-  methods: {
-    async getCategories() {
-      await axios.get("/api/products_categories").then(({ data }) => {
-        this.categories = data;
-      });
-    },
-
+  methods: {    
     async getProduct() {
       await axios
         .get(`/api/products/${this.$route.params.id}`)
@@ -141,9 +160,15 @@ export default {
     },
 
     async onSubmit() {
-      await this.form.patch(`/api/products/${this.$route.params.id}`)
-        .then(response => {});
-    }
+        await this.form.submit('post', `/api/products/${this.$route.params.id}`, {
+          transformRequest: [function (data, headers) {
+                data['_method'] = 'PUT'
+                return objectToFormData(data)
+              }],
+      })
+      .then((response) => {
+      });
+    },    
   }
 };
 </script>

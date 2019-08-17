@@ -121,14 +121,16 @@ import Tippy from "v-tippy";
 import "v-tippy/dist/tippy.css";
 import { Form, HasError, AlertSuccess} from "vform";
 import objectToFormData from 'object-to-formdata'
+import categories from '../../mixins/categories'
+import fileUpload from '../../mixins/fileUpload';
 
 Vue.use(Tippy);
 Vue.component(HasError.name, HasError);
 Vue.component(AlertSuccess.name, AlertSuccess)
 
 export default {
+  
   data: () => ({
-    categories: [],
     form: new Form({
       name: "",
       description: "",
@@ -137,17 +139,9 @@ export default {
     })
   }),
 
-  created() {
-    this.getCategories();
-  },
+  mixins: [categories, fileUpload],
 
   methods: {
-    async getCategories() {
-      await axios.get("/api/products_categories").then(({ data }) => {
-        this.categories = data;
-      });
-    },
-
     async onSubmit() {
       await this.form.submit('post', '/api/products', {
           transformRequest: [function (data, headers) {
@@ -158,14 +152,6 @@ export default {
           this.form.reset()
       });
     },
-
-    openFileDialog() {
-      this.$refs.input.click();
-    },
-
-    addFile() {
-      this.form.image = this.$refs.input.files[0]
-    }
   }
 };
 </script>

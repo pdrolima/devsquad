@@ -8,6 +8,7 @@ use Illuminate\Http\Response;
 use Facades\App\Services\ImageUpload;
 use App\Http\Requests\ProductUpdateRequest;
 use App\Http\Resources\ProductResource;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
@@ -66,7 +67,7 @@ class ProductController extends Controller
         tap($product, function ($instance) use ($request) {
             return $instance->fill([
                 'name' => $request->name,
-                'image' => ! is_null($request->image) ? ImageUpload::upload($request->file('image')) : $instance->image,
+                'image' => ! is_null($request->file('image')) ? ImageUpload::upload($request->file('image')) : $instance->image,
                 'description' => $request->description,
                 'category' => $request->category,
                 'price' => $request->price
