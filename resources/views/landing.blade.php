@@ -89,7 +89,7 @@
                                     </g>
                                 </svg>
                                 <div>
-                                    <p>Funding awarded in just 10 - 21 days so you can move quickly.</p>
+                                    <p class="benefits__item--text">Funding awarded in just 10 - 21 days so you can move quickly.</p>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                                     </g>
                                 </svg>
                                 <div>
-                                    <p>Senior funding advisor to help you succeed.</p>
+                                    <p class="benefits__item--text">Senior funding advisor to help you succeed.</p>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                                     </g>
                                 </svg>
                                 <div>
-                                    <p>Data-driven algorithm to strategize your application process for the best results.</p>
+                                    <p class="benefits__item--text">Data-driven algorithm to strategize your application process for the best results.</p>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +165,7 @@
                                     </g>
                                 </svg>
                                 <div>
-                                    <p>Loan marketplace to make lenders compete for you and improve their terms.</p>
+                                    <p class="benefits__item--text">Loan marketplace to make lenders compete for you and improve their terms.</p>
                                 </div>
                             </div>
                         </div>

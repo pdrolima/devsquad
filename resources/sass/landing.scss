@@ -1,11 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font-family-base;
     background: #fff;
 }
 
@@ -15,6 +9,7 @@ header {
     height: 975px;
 }
 
+/* Top Hero */
 .brand {
     background-color: #fff;
     width: 100%;
@@ -27,6 +22,7 @@ header {
     }
 }
 
+/* Top Hero Legend */
 .brand__briefing {
     margin-top: 0.625rem;
     padding: 3rem;
@@ -34,6 +30,7 @@ header {
     @media (min-width: 768px) {
         max-width: 500px;
     }
+    
     h1 {
         width: 40%;
         color: #fff;
@@ -56,7 +53,7 @@ header {
         padding-top: 0.625rem;
     }
 }
-
+/* Legend */
 .brand__legend {
     background-color: $atom-grey;
 
@@ -75,10 +72,11 @@ header {
     }
 }
 
+/* Benefits */
 .benefits {
     margin-top: 30px;
     .benefits__item {
-        > div > div > p {
+        .benefits__item--text {
             max-width: 250px;
             text-align: left;
             padding-top: 0.625rem;
@@ -88,6 +86,7 @@ header {
     }
 }
 
+/* Utilities */
 .text-dark-light {
     color: $atom-dark-light
 }
@@ -103,6 +102,7 @@ header {
     margin-top: 4rem;
 }
 
+/* Testimonials */
 .box-testimonial {
     width: 600px;
     max-width: 100%;
@@ -111,6 +111,7 @@ header {
     text-align: center;
 }
 
+/* Footer */
 footer {
     background-color: #575757;
 
