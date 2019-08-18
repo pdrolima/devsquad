@@ -10644,8 +10644,14 @@ a.text-dark:focus {
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
+  background: #fff;
 }
 
 header {
@@ -10667,30 +10673,38 @@ header {
 }
 
 .brand__briefing {
-  padding-top: 100px;
-  z-index: 2;
+  margin-top: 0.625rem;
+  padding: 3rem;
+}
+
+@media (min-width: 768px) {
+  .brand__briefing {
+    max-width: 500px;
+  }
 }
 
 .brand__briefing h1 {
   width: 40%;
   color: #fff;
-  font-size: 85px;
+  font-size: 4.6875rem;
   letter-spacing: 0.75px;
   font-weight: bold;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .brand__briefing h1 {
+    font-size: 3.125rem;
+  }
 }
 
 .brand__briefing h3 {
   max-width: 380px;
 }
 
-.brand__briefing button {
-  width: 350px;
-}
-
 .brand__briefing p {
   color: #fff;
-  padding-top: 10px;
+  padding-top: 0.625rem;
 }
 
 .brand__legend {
@@ -10718,9 +10732,9 @@ header {
 .benefits .benefits__item > div > div > p {
   max-width: 250px;
   text-align: left;
-  padding-top: 10px;
-  padding-right: 5px;
-  margin-left: 5px;
+  padding-top: 0.625rem;
+  padding-right: 0.3125rem;
+  margin-left: 0.3125rem;
 }
 
 .text-dark-light {
@@ -10745,5 +10759,29 @@ header {
   display: inline-block;
   max-width: 100%;
   text-align: center;
+}
+
+footer {
+  background-color: #575757;
+}
+
+footer .footer-links {
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  footer .footer-links {
+    margin-top: 10px;
+  }
+}
+
+footer .social-links {
+  margin-right: 10px;
+}
+
+@media (max-width: 576px) {
+  footer .social-links {
+    margin-top: 10px;
+  }
 }
 

@@ -18,23 +18,21 @@
     </div>
     <header>
         <main>
-            <div class="brand__briefing p-5">
-                <div class="row">
-                    <div class="col-md-6 mx-5">
-                        <h1>
-                            Fast and simple, Unsecured funding.
-                        </h1>
-                        <h3 class="text-white font-weight-normal">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-                        </h3>
-                        <div class="mt-4">
-                            <button class="btn btn-rounded btn-lg btn-success text-uppercase">
-                                Apply now
-                            </button>
-                            <p>
-                                Applying doesn’t affect your credit score, and there’s no obligation to accept funding.
-                            </p>
-                        </div>
+            <div class="brand__briefing">
+                <div class="d-flex flex-column">
+                    <h1>
+                        Fast and simple, Unsecured funding.
+                    </h1>
+                    <h3 class="text-white font-weight-normal">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+                    </h3>
+                    <div class="mt-4">
+                        <button class="btn btn-rounded btn-lg btn-success text-uppercase">
+                            Apply now
+                        </button>
+                        <p>
+                            Applying doesn’t affect your credit score, and there’s no obligation to accept funding.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -183,47 +181,47 @@
                     <h1 class="font-weight-bold pt-4">Capital for start-ups, small businesses and entrepreneurs</h1>
                 </div>
                 <div class="col-xs-12 col-sm-10 m-auto">
-                        <!-- wallet -->
-                        <div class="row">
-                            <!-- Image -->
-                            <div class="col-xs-12 col-md-5">
-                                <div class="absolute">
-                                    <img src="{{ asset('images/wallet.png') }}" alt="" width="275">
-                                </div>
-                            </div>
-                            <!-- Text -->
-                            <div class="col-xs-12 col-md-7">
-                                <div class="relative ml-4 mt-4" style="max-width: 500px">
-                                    <h2 class="font-weight-bold">Start-up funding</h2>
-                                    <span class="text-dark-lighter">Maximize your funding</span>
-                                    <p>Receive more funding than you could anywhere else with our strategic, perfectly-timed application process.</p>
-                                    <button class="btn btn-sm btn-rounded btn-lg btn-success text-uppercase">
-                                        Apply now
-                                    </button>
-                                </div>
+                    <!-- wallet -->
+                    <div class="row">
+                        <!-- Image -->
+                        <div class="col-xs-12 col-md-5">
+                            <div class="absolute">
+                                <img src="{{ asset('images/wallet.png') }}" alt="" width="275">
                             </div>
                         </div>
-                        <!-- Business funding -->
-                        <div class="row mt-5">
-                            <!-- Text -->
-                            <div class="col-xs-12 col-md-7">
-                                <div class="relative text-left" style="max-width: 500px">
-                                    <h2 class="font-weight-bold">Business funding</h2>
-                                    <span class="text-dark-lighter">Get lenders to compete for you</span>
-                                    <p>Receive better rates and higher funding amounts than you can anywhere else with our competitive loan marketplace.</p>
-                                    <button class="btn btn-sm btn-rounded btn-lg btn-success text-uppercase">
-                                        Apply now
-                                    </button>
-                                </div>
+                        <!-- Text -->
+                        <div class="col-xs-12 col-md-7">
+                            <div class="relative ml-4 mt-4" style="max-width: 500px">
+                                <h2 class="font-weight-bold">Start-up funding</h2>
+                                <span class="text-dark-lighter">Maximize your funding</span>
+                                <p>Receive more funding than you could anywhere else with our strategic, perfectly-timed application process.</p>
+                                <button class="btn btn-sm btn-rounded btn-lg btn-success text-uppercase">
+                                    Apply now
+                                </button>
                             </div>
-                            <!-- Image -->
-                            <div class="col-xs-12 col-md-5">
-                                <div class="absolute">
-                                    <img src="{{ asset('images/rocket.png') }}" alt="" width="275">
-                                </div>
-                            </div>                      
                         </div>
                     </div>
+                    <!-- Business funding -->
+                    <div class="row mt-5">
+                        <!-- Text -->
+                        <div class="col-xs-12 col-md-7">
+                            <div class="relative text-left" style="max-width: 500px">
+                                <h2 class="font-weight-bold">Business funding</h2>
+                                <span class="text-dark-lighter">Get lenders to compete for you</span>
+                                <p>Receive better rates and higher funding amounts than you can anywhere else with our competitive loan marketplace.</p>
+                                <button class="btn btn-sm btn-rounded btn-lg btn-success text-uppercase">
+                                    Apply now
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Image -->
+                        <div class="col-xs-12 col-md-5">
+                            <div class="absolute">
+                                <img src="{{ asset('images/rocket.png') }}" alt="" width="275">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Testimonials -->
@@ -265,5 +263,80 @@
             </div>
         </section>
     </main>
+    <footer>
+        <div class="container mx-auto">
+            <div class="row p-5 text-left">
+                <div class="col-xs-12">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="76.434" height="68.054" viewBox="0 0 76.434 68.054">
+                        <defs>
+                            <style>
+                                .a {
+                                    fill: #fff;
+                                }
+                            </style>
+                        </defs>
+                        <g transform="translate(-71.5 -89.45)">
+                            <path class="a" d="M1107.67,1681.154a6.839,6.839,0,1,1,6.839-6.839A6.847,6.847,0,0,1,1107.67,1681.154Zm.1-10.179a3.5,3.5,0,1,0,3.5,3.5A3.5,3.5,0,0,0,1107.769,1670.975Z" transform="translate(-997.939 -1551)" />
+                            <path class="a" d="M144.037,116.576a31.19,31.19,0,0,0-9.673-5.1c-.79-.272-1.608-.545-2.452-.763.136-.572.272-1.144.381-1.689,1.907-9.21.545-16.377-3.515-18.72-1.989-1.144-4.714-1.144-7.848,0a31.057,31.057,0,0,0-9.237,5.831c-.627.545-1.281,1.144-1.907,1.744-.436-.409-.845-.79-1.281-1.172-7.03-6.24-13.924-8.665-17.984-6.322-1.989,1.144-3.352,3.515-3.924,6.812a31.6,31.6,0,0,0,.436,10.927c.164.817.354,1.689.572,2.534-.981.272-1.935.572-2.834.9-8.311,2.888-13.27,7.3-13.27,11.826,0,2.343,1.39,4.8,4.006,7.03a30.809,30.809,0,0,0,10,5.341c.681.218,1.362.436,2.071.654-.218.926-.436,1.826-.6,2.725-1.635,8.638-.272,15.15,3.624,17.412a7.183,7.183,0,0,0,3.651.9,13.1,13.1,0,0,0,4.414-.845,30.516,30.516,0,0,0,9.619-5.967c.518-.463,1.063-.954,1.58-1.471.681.654,1.39,1.281,2.071,1.88,4.9,4.224,9.592,6.458,13.3,6.458a6.948,6.948,0,0,0,3.57-.9c2.044-1.172,3.461-3.6,4.087-6.976a31.762,31.762,0,0,0-.381-11.336c-.136-.681-.272-1.362-.463-2.044.49-.136.954-.3,1.417-.436,8.938-2.943,14.469-7.711,14.469-12.4C147.961,121.1,146.6,118.729,144.037,116.576Zm-21.99-23.189c2.18-.79,3.978-.872,5.1-.245,2.18,1.253,3.733,6.567,1.935,15.232-.109.49-.218,1.008-.354,1.5a76.1,76.1,0,0,0-10.246-1.608,74.882,74.882,0,0,0-6.458-8.038c.572-.572,1.172-1.09,1.744-1.608A29.2,29.2,0,0,1,122.047,93.388Zm-1.635,36.241c-1.2,2.071-2.425,4.06-3.651,5.913-2.262.163-4.605.245-7,.245s-4.714-.082-6.921-.218c-1.308-1.907-2.561-3.9-3.733-5.913-1.172-2.044-2.262-4.115-3.27-6.158.981-2.071,2.071-4.142,3.243-6.158h0c1.172-2.044,2.425-4.033,3.706-5.913,2.289-.163,4.605-.272,6.949-.272,2.371,0,4.687.082,6.976.272,1.253,1.88,2.507,3.842,3.679,5.886,1.2,2.1,2.316,4.142,3.3,6.131C122.7,125.487,121.611,127.558,120.412,129.629Zm5.041-2.425a65.654,65.654,0,0,1,2.561,6.73,64.724,64.724,0,0,1-7.139,1.226c.79-1.253,1.58-2.561,2.343-3.9C124.036,129.9,124.772,128.539,125.453,127.2Zm-15.586,17.276a68.243,68.243,0,0,1-4.605-5.5c1.444.055,2.943.082,4.469.082,1.553,0,3.106-.027,4.632-.109C112.864,140.964,111.365,142.817,109.867,144.479Zm-11.2-9.292a62.141,62.141,0,0,1-7.03-1.144,70.42,70.42,0,0,1,2.48-6.73c.681,1.308,1.417,2.643,2.18,3.951Q97.4,133.307,98.667,135.187Zm-2.4-19.51c-.763,1.308-1.471,2.643-2.18,3.951a67.951,67.951,0,0,1-2.425-6.622c2.18-.49,4.523-.9,6.948-1.2C97.8,113.089,97.005,114.369,96.269,115.677Zm13.515-13.107c1.5,1.635,3,3.433,4.5,5.423-1.5-.082-3.025-.109-4.551-.109-1.5,0-3,.027-4.469.109A66.153,66.153,0,0,1,109.785,102.57Zm13.434,13.08c-.763-1.308-1.526-2.589-2.316-3.815a66.261,66.261,0,0,1,6.976,1.226,63.715,63.715,0,0,1-2.452,6.594Q124.4,117.653,123.219,115.65ZM90.247,107.5a27.418,27.418,0,0,1-.409-9.728c.381-2.289,1.226-3.9,2.343-4.551,2.18-1.253,7.548.055,14.169,5.94q.572.49,1.144,1.063a75.793,75.793,0,0,0-6.485,8.038,81.126,81.126,0,0,0-10.218,1.58C90.574,109.056,90.411,108.293,90.247,107.5Zm-3.706,25.178c-8.093-2.752-11.772-6.758-11.772-9.292,0-2.425,3.433-6.077,11.09-8.747q1.267-.45,2.616-.817a75.487,75.487,0,0,0,3.733,9.673,77.041,77.041,0,0,0-3.76,9.782C87.795,133.089,87.168,132.871,86.541,132.681Zm7.711,21.5a4.014,4.014,0,0,1-2.016-.463c-2.1-1.2-3.542-5.995-2.044-13.951.163-.817.354-1.662.545-2.534a77.163,77.163,0,0,0,10.3,1.5,81.793,81.793,0,0,0,6.567,8.12c-.49.463-.981.926-1.444,1.335C101.2,152.463,96.951,154.18,94.253,154.18Zm35.1-15.259c1.662,8.393.055,13.57-2.125,14.823-2.1,1.226-6.976.082-13.107-5.2-.627-.545-1.281-1.144-1.935-1.744a71.94,71.94,0,0,0,6.4-8.147,75.086,75.086,0,0,0,10.355-1.608Q129.145,138.021,129.35,138.921Zm3.134-6.24c-.409.136-.845.272-1.281.409a74.458,74.458,0,0,0-3.869-9.673,79.166,79.166,0,0,0,3.733-9.564c.79.218,1.553.463,2.289.708a28.066,28.066,0,0,1,8.638,4.523c1.771,1.471,2.752,3,2.752,4.305C144.718,125.923,140.876,129.9,132.483,132.681Z" />
+                        </g>
+                    </svg>
+                </div>
+                <!-- Links -->
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="" class="footer-links">How it Works</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-links">Get Funding</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-links">Apply Now</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="" class="footer-links">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-links">Careers</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-links">FAQ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End links -->
+                <!-- Begin Social Media -->
+                <div class="col-md-4">
+                    <div class="d-flex">
+                        <a href="#" class="social-links">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="49.1" height="49.1" viewBox="0 0 49.1 49.1"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M10.315,31.025A5.158,5.158,0,1,1,5.16,25.87h5.155v5.155Zm2.6,0a5.158,5.158,0,0,1,10.315,0V43.94a5.158,5.158,0,1,1-10.315,0V31.025Zm5.158-20.71A5.158,5.158,0,1,1,23.23,5.16v5.155Zm0,2.6a5.158,5.158,0,0,1,0,10.315H5.16a5.158,5.158,0,1,1,0-10.315H18.073Zm20.708,5.158a5.16,5.16,0,1,1,5.16,5.158h-5.16V18.073Zm-2.594,0a5.159,5.159,0,0,1-10.317,0V5.16a5.159,5.159,0,1,1,10.317,0ZM31.025,38.781a5.16,5.16,0,1,1-5.155,5.16v-5.16h5.155Zm0-2.594a5.159,5.159,0,0,1,0-10.317H43.94a5.159,5.159,0,1,1,0,10.317H31.025Z"/></svg>
+                        </a>
+                        <a href="#" class="social-links">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="49.102" height="39.908" viewBox="0 0 49.102 39.908"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M49.006,7a20.459,20.459,0,0,1-5.779,1.586,10.143,10.143,0,0,0,4.425-5.571,20.792,20.792,0,0,1-6.4,2.422,10.063,10.063,0,0,0-17.412,6.87,10.3,10.3,0,0,0,.26,2.3A28.508,28.508,0,0,1,3.355,4.118,9.865,9.865,0,0,0,1.993,9.181a10.067,10.067,0,0,0,4.476,8.38A10.033,10.033,0,0,1,1.911,16.3v.125A10.072,10.072,0,0,0,9.984,26.3a10.158,10.158,0,0,1-4.525.174,10.1,10.1,0,0,0,9.419,6.991A20.188,20.188,0,0,1,2.394,37.772,21.365,21.365,0,0,1,0,37.635a28.632,28.632,0,0,0,15.46,4.519c18.523,0,28.639-15.336,28.639-28.613,0-.428,0-.859-.031-1.289A20.327,20.327,0,0,0,49.1,7.039L49.006,7Z" transform="translate(0 -2.246)"/></svg>
+                        </a>
+                        <a href="#" class="social-links">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="49.1" height="49.1" viewBox="0 0 49.1 49.1"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M41.831,41.841H34.56V30.448c0-2.717-.055-6.213-3.789-6.213-3.791,0-4.37,2.956-4.37,6.013V41.841H19.13V18.412h6.984v3.194h.094A7.662,7.662,0,0,1,33.1,17.821c7.367,0,8.73,4.849,8.73,11.16v12.86ZM10.919,15.207a4.223,4.223,0,1,1,4.223-4.225A4.218,4.218,0,0,1,10.919,15.207Zm3.646,26.635H7.273V18.412h7.291ZM45.468,0H3.623A3.58,3.58,0,0,0,0,3.537V45.563A3.578,3.578,0,0,0,3.623,49.1H45.462A3.592,3.592,0,0,0,49.1,45.563V3.537A3.593,3.593,0,0,0,45.462,0Z"/></svg>
+                        </a>
+                        <a href="#" class="social-links">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="49.096" height="48.798" viewBox="0 0 49.096 48.798"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M49.1,24.548A24.548,24.548,0,1,0,20.712,48.8V31.644H14.479v-7.1h6.233V19.14c0-6.152,3.665-9.551,9.272-9.551a37.752,37.752,0,0,1,5.5.479V16.11h-3.1c-3.05,0-4,1.892-4,3.834v4.6h6.808l-1.088,7.1h-5.72V48.8A24.554,24.554,0,0,0,49.1,24.548Z"/></svg>
+                        </a>
+                        <a href="#" class="social-links">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="49.1" height="49.1" viewBox="0 0 49.1 49.1"><defs><style>.a{fill:#fff;}</style></defs><path class="a" d="M24.55,0c-6.669,0-7.5.031-10.121.147A18.1,18.1,0,0,0,8.47,1.289,12.022,12.022,0,0,0,4.12,4.12,11.978,11.978,0,0,0,1.289,8.47,18.05,18.05,0,0,0,.147,14.429C.025,17.048,0,17.881,0,24.55s.031,7.5.147,10.121a18.114,18.114,0,0,0,1.142,5.96A12.04,12.04,0,0,0,4.12,44.98,12.005,12.005,0,0,0,8.47,47.811a18.125,18.125,0,0,0,5.959,1.142c2.619.123,3.451.147,10.121.147s7.5-.031,10.121-.147a18.167,18.167,0,0,0,5.959-1.142,12.546,12.546,0,0,0,7.181-7.181,18.114,18.114,0,0,0,1.142-5.959c.123-2.619.147-3.451.147-10.121s-.031-7.5-.147-10.121A18.156,18.156,0,0,0,47.811,8.47,12.049,12.049,0,0,0,44.979,4.12,11.961,11.961,0,0,0,40.63,1.289,18.061,18.061,0,0,0,34.671.147C32.052.025,31.219,0,24.55,0Zm0,4.419c6.553,0,7.334.033,9.922.145a13.526,13.526,0,0,1,4.556.849,8.079,8.079,0,0,1,4.66,4.658,13.555,13.555,0,0,1,.845,4.556c.117,2.59.143,3.367.143,9.922s-.031,7.334-.151,9.922a13.816,13.816,0,0,1-.861,4.556,7.8,7.8,0,0,1-1.839,2.827A7.659,7.659,0,0,1,39,43.689a13.654,13.654,0,0,1-4.572.845c-2.606.117-3.374.143-9.941.143s-7.336-.031-9.941-.151a13.921,13.921,0,0,1-4.574-.861,7.6,7.6,0,0,1-2.821-1.839A7.454,7.454,0,0,1,5.311,39a13.933,13.933,0,0,1-.859-4.572c-.092-2.578-.125-3.374-.125-9.91s.033-7.336.125-9.945A13.917,13.917,0,0,1,5.311,10,7.277,7.277,0,0,1,7.152,7.179,7.261,7.261,0,0,1,9.973,5.342a13.588,13.588,0,0,1,4.544-.861c2.608-.092,3.376-.123,9.941-.123l.092.061Zm0,7.525A12.606,12.606,0,1,0,37.156,24.55,12.606,12.606,0,0,0,24.55,11.944Zm0,20.79a8.183,8.183,0,1,1,8.183-8.183A8.181,8.181,0,0,1,24.55,32.733ZM40.6,11.446A2.946,2.946,0,1,1,37.655,8.5,2.948,2.948,0,0,1,40.6,11.446Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- End Social Media -->
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
