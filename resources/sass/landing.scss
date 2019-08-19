@@ -4,9 +4,15 @@ body {
 }
 
 header {
-    background: url(../images/bg.png) no-repeat;
+    background-image: linear-gradient(to right, rgba(33, 37, 41, 0.3), rgba(0, 0, 0, 0.2)), url(../images/bg.png);
     width: 100%;
     height: 975px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width: 576px) {
+        background-position: right 25% bottom 45%;
+    }
 }
 
 /* Top Hero */
@@ -19,16 +25,27 @@ header {
 
     .brand__logo {
         height: 53px;
+        margin-left: .875rem !important;
+        text-align: left;
+        padding-top: 5px;
+
+        @media (min-width: 768px) {
+            margin-left: 7.5rem !important;
+        }
     }
 }
 
 /* Top Hero Legend */
 .brand__briefing {
     margin-top: 0.625rem;
-    padding: 3rem;
+    padding: 10rem 0 0 9rem;
 
     @media (min-width: 768px) {
-        max-width: 500px;
+        max-width: 850px;
+    }
+
+    @media (max-width: 576px) {        
+        padding: 10rem 0 0 1rem;
     }
     
     h1 {
@@ -109,7 +126,13 @@ header {
     display: inline-block;
     max-width: 100%;
     text-align: center;
+
+    .testimonial-user {
+        border-bottom: 1px solid rgba(112, 112, 112, .15);
+        padding-bottom: 0.625rem;
+    }
 }
+
 
 /* Footer */
 footer {

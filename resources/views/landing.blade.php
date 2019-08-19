@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="brand md-flex p-2 flex-column">
+    <div class="brand d-flex p-2 flex-column">
         <div class="brand__logo ml-5 mb-5">
             <img src="{{ asset('images/logo.png') }}" alt="" width="159">
         </div>
@@ -30,7 +30,7 @@
                         <button class="btn btn-rounded btn-lg btn-success text-uppercase">
                             Apply now
                         </button>
-                        <p>
+                        <p class="pt-4">
                             Applying doesn’t affect your credit score, and there’s no obligation to accept funding.
                         </p>
                     </div>
@@ -234,11 +234,16 @@
                     <!-- Testimonial 1 -->
                     <div class="bg-white shadow-sm box-testimonial mb-4">
                         <div class="card-body">
-                            <div class="text-justify">
-                                <div class="mb-4">
+                            <div class="testimonial-user d-flex align-items-center mb-4">
+                                <div>
                                     <img src="{{ asset('images/jack.png') }}" alt="">
-                                    <span class="font-weight-bold block">John Neil</span>
                                 </div>
+                                <div class="text-left flex-grow px-2">
+                                    <span class="font-weight-bold d-block">John Neil</span>
+                                    <span class="text-muted">Like Family Care NY</span>
+                                </div>
+                            </div>
+                            <div class="text-justify">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint.
                                 </p>
@@ -248,11 +253,16 @@
                     <!-- Testimonial 2 -->
                     <div class="bg-white shadow-sm box-testimonial mb-4">
                         <div class="card-body">
-                            <div class="text-justify">
-                                <div class="mb-4">
+                            <div class="testimonial-user d-flex align-items-center mb-4">
+                                 <div>
                                     <img src="{{ asset('images/jurica.png') }}" alt="">
-                                    <span class="font-weight-bold block">Nick Maine</span>
-                                </div>
+                                 </div>
+                                 <div class="text-left flex-grow px-2">
+                                    <span class="font-weight-bold d-block">Nick Maine</span>
+                                    <span class="text-muted">Picasso Details</span>
+                                 </div>
+                            </div>
+                            <div class="text-justify">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint.
                                 </p>
