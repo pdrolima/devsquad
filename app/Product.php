@@ -50,4 +50,14 @@ class Product extends Model
             ? url($this->image)
             : null;
     }
+
+    /**
+     * Check if product has an image.
+     *
+     * @return boolean
+     */
+    public function hasImage()
+    {
+        return ! is_null($this->image);
+    }
 }

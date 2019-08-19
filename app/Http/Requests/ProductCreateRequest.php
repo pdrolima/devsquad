@@ -32,6 +32,7 @@ class ProductCreateRequest extends FormRequest
                     $query->whereNull('deleted_at');
                 })
             ],
+            'image' => 'sometimes|image:jpeg,jpg,png,gif',
             'description' => 'required',
             'category' => 'required|exists:product_categories,id',
             'price' => 'required|integer',

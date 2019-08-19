@@ -31,6 +31,7 @@
                         Adicionar imagem
                       </a>
                     </div>
+                    <has-error :form="form" field="image"></has-error>
                   </div>
                 </div>
                 <!-- Product Name -->

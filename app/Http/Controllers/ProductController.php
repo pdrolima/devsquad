@@ -20,7 +20,16 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('name')->paginate(10);
+        $product = Product::query();
+
+        if (request()->has('name')) {
+            $product->when('name', function ($query) {
+                $query->where('name', 'like', '%' . request()->name . '%');
+            });
+        }
+
+        $products = $product->orderBy('name', 'ASC')
+        ->paginate(10);
 
         return ProductResource::collection($products);
     }
@@ -85,8 +94,15 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        $product->delete();
+        if ($product->hasImage()) {
+            File::delete(public_path($product->image));
 
+            $product->image = null;
+            $product->save();    
+        }
+
+        $product->delete();
+       
         return response()->json([], Response::HTTP_OK);
     }
 }

@@ -9,6 +9,7 @@ import routes from './routes'
 
 Vue.use(VueRouter);
 Vue.use(VueTextareaAutosize)
+Vue.component('pagination', require('laravel-vue-pagination'))
 
 const router = new VueRouter({
     routes,

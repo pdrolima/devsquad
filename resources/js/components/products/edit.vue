@@ -32,6 +32,7 @@
                         {{ form.image ? 'Change' : 'Upload' }} image
                       </a>
                     </div>
+                    <has-error :form="form" field="image"></has-error>
                   </div>
                 </div>
                 <!-- Product Name -->
